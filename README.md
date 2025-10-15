@@ -33,8 +33,6 @@ Structure du package (racine) : `adapters/next`, `core`, `theme.css`, `package.j
 
 ## Installation (via package.json)
 
-> ⚠️ Publie d’abord une **Release** dans ce repo (onglet “Releases” → “Draft a new release” → Tag ex. `v0.1.0` → Publish).
-
 Dans **l’app consommatrice**, édite `package.json` :
 
 ```json
