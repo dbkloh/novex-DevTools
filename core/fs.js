@@ -16,3 +16,22 @@ export async function ensureUniquePath(targetPath) {
     catch { return candidate; }
   }
 }
+
+export async function safeWriteFile(targetPath, data) {
+  await fs.mkdir(path.dirname(targetPath), { recursive: true });
+  const unique = await ensureUniquePath(targetPath);
+  await fs.writeFile(unique, data);
+  return unique;
+}
+
+export function standardFileName(prefix, ext) {
+  const d = new Date(), p = n => String(n).padStart(2,'0');
+  const stamp = `${d.getFullYear()}${p(d.getMonth()+1)}${p(d.getDate())}-${p(d.getHours())}${p(d.getMinutes())}${p(d.getSeconds())}`;
+  return `${prefix}-${stamp}${ext}`;
+}
+
+export function getLanguage(filePath) {
+  const ext = path.extname(filePath).slice(1);
+  const map = { ts:'ts', tsx:'tsx', js:'js', jsx:'jsx', json:'json', md:'md', css:'css', html:'html' };
+  return map[ext] || '';
+}
