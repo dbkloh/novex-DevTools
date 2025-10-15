@@ -1,0 +1,19 @@
+{
+  "name": "@novex/devtools",
+  "version": "0.1.0",
+  "private": false,
+  "license": "UNLICENSED",
+  "type": "module",
+  "exports": {
+    "./adapters/next/dev-docs": "./adapters/next/dev-docs.js",
+    "./adapters/next/export-code": "./adapters/next/export-code.js",
+    "./adapters/next/export-docs": "./adapters/next/export-docs.js",
+    "./theme.css": "./theme.css"
+  },
+  "files": ["adapters", "core", "theme.css", "README.md", "LICENSE"],
+  "dependencies": {
+    "jszip": "^3.10.1",
+    "semver": "^7.6.3",
+    "zod": "^3.23.8"
+  }
+}
