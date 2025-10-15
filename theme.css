@@ -1,0 +1,12 @@
+:root {
+  --nvx-bg: var(--background, #0b0b0d);
+  --nvx-fg: var(--foreground, #eaeaea);
+  --nvx-card: var(--card, var(--background, #111));
+  --nvx-border: var(--border, rgba(255,255,255,0.1));
+  --nvx-primary: var(--primary, #7c5cff);
+  --nvx-muted: var(--muted, #9aa0a6);
+}
+.nvx-devtools { color: var(--nvx-fg); background: var(--nvx-bg); }
+.nvx-devtools .card { background: var(--nvx-card); border: 1px solid var(--nvx-border); border-radius: 10px; }
+.nvx-devtools .btn-primary { background: var(--nvx-primary); color: #fff; }
+.nvx-devtools .muted { color: var(--nvx-muted); }
