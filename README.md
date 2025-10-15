@@ -38,6 +38,6 @@ Dans **l’app consommatrice**, édite `package.json` :
 ```json
 {
   "dependencies": {
-    "@novex/devtools": "git+https://github.com/dbkloh/novex-DevTools.git#v0.1.0"
+    "@novex/devtools": "git+https://github.com/dbkloh/novex-DevTools.git#<TAG>"
   }
 }
