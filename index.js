@@ -1,11 +1,6 @@
-// @novex/devtools - root shim (no UI export here)
-// Use subpaths:
-//  - @novex/devtools/adapters/next/export-code
-//  - @novex/devtools/adapters/next/export-docs
-//  - @novex/devtools/adapters/next/dev-docs
-//  - @novex/devtools/adapters/next/technical-changelog
-//  - @novex/devtools/adapters/next/summarize-changelog
-//  - @novex/devtools/theme.css
-export const __NOVEX_DEVTOOLS__ =
-  "This package auto-scaffolds routes/UI via postinstall. Import handlers via subpaths.";
+// Root exports: a ready-to-use UI component + convenience re-exports
+export { DevtoolsCard as DevTools } from "./ui/card.js"; // named export { DevTools }
+export { DevtoolsCard } from "./ui/card.js";             // alternative name
+export * as Route from "./adapters/next/catchall-route.js"; // { GET, POST }
+export { default as theme } from "./theme.css" assert { type: "css" }; // optional
 export default {};
