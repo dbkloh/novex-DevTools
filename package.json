@@ -1,18 +1,15 @@
 {
   "name": "@novex/devtools",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "Centralized DevTools for Next.js apps (route factories, core fs helpers, theme).",
   "type": "module",
   "license": "MIT",
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/dbkloh/novex-DevTools.git"
-  },
-  "bugs": {
-    "url": "https://github.com/dbkloh/novex-DevTools/issues"
-  },
+  "repository": { "type": "git", "url": "git+https://github.com/dbkloh/novex-DevTools.git" },
+  "bugs": { "url": "https://github.com/dbkloh/novex-DevTools/issues" },
   "homepage": "https://github.com/dbkloh/novex-DevTools#readme",
+  "main": "./index.js",
   "exports": {
+    ".": "./index.js",
     "./adapters/next/dev-docs": "./adapters/next/dev-docs.js",
     "./adapters/next/export-code": "./adapters/next/export-code.js",
     "./adapters/next/export-docs": "./adapters/next/export-docs.js",
@@ -20,29 +17,13 @@
     "./adapters/next/summarize-changelog": "./adapters/next/summarize-changelog.js",
     "./theme.css": "./theme.css"
   },
-  "files": [
-    "adapters",
-    "core",
-    "theme.css",
-    "README.md",
-    "LICENSE"
-  ],
-  "keywords": [
-    "nextjs",
-    "devtools",
-    "export",
-    "docs",
-    "changelog"
-  ],
+  "files": ["adapters", "core", "theme.css", "index.js", "README.md", "LICENSE"],
+  "keywords": ["nextjs", "devtools", "export", "docs", "changelog"],
   "dependencies": {
     "jszip": "^3.10.1",
     "semver": "^7.6.3",
     "zod": "^3.23.8"
   },
-  "engines": {
-    "node": ">=18.17"
-  },
-  "sideEffects": [
-    "./theme.css"
-  ]
+  "engines": { "node": ">=18.17" },
+  "sideEffects": ["./theme.css"]
 }
