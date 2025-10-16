@@ -1,8 +1,11 @@
-// Entrypoint "neutre" pour éviter les erreurs de résolution racine.
-// NB: les APIs réelles sont sous @novex/devtools/adapters/next/* (+ theme.css).
-export const info = {
-  name: "@novex/devtools",
-  message: "Use subpath exports, e.g. @novex/devtools/adapters/next/export-code",
-  versionHint: "Pinned via git tag or branch"
-};
-export default info;
+// @novex/devtools - root shim (no UI export here)
+// Use subpaths:
+//  - @novex/devtools/adapters/next/export-code
+//  - @novex/devtools/adapters/next/export-docs
+//  - @novex/devtools/adapters/next/dev-docs
+//  - @novex/devtools/adapters/next/technical-changelog
+//  - @novex/devtools/adapters/next/summarize-changelog
+//  - @novex/devtools/theme.css
+export const __NOVEX_DEVTOOLS__ =
+  "This package auto-scaffolds routes/UI via postinstall. Import handlers via subpaths.";
+export default {};
