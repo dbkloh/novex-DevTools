@@ -1,7 +1,7 @@
 {
   "name": "@novex/devtools",
   "version": "0.2.0",
-  "description": "Centralized DevTools for Next.js apps (precompiled UI, catch-all route, theme).",
+  "description": "Centralized DevTools for Next.js apps (auto-scaffold via postinstall, precompiled UI, catch-all route, theme).",
   "type": "module",
   "license": "MIT",
   "repository": { "type": "git", "url": "git+https://github.com/dbkloh/novex-DevTools.git" },
@@ -22,15 +22,23 @@
     "theme.css",
     "index.js",
     "index.d.ts",
+    "bin",
     "README.md",
     "LICENSE"
   ],
-  "keywords": ["nextjs","devtools","export","docs","changelog","route","ui"],
+  "bin": {
+    "novex-devtools": "./bin/cli.mjs"
+  },
+  "scripts": {
+    "postinstall": "node ./bin/cli.mjs --auto || node ./bin/cli.mjs --silent"
+  },
+  "keywords": ["nextjs","devtools","export","docs","changelog","route","ui","scaffold"],
   "peerDependencies": {
     "next": ">=13.4.0",
     "react": ">=18.2.0",
     "react-dom": ">=18.2.0"
   },
   "sideEffects": ["./theme.css"],
-  "engines": { "node": ">=18.17" }
+  "engines": { "node": ">=18.17" },
+  "publishConfig": { "access": "public" }
 }
